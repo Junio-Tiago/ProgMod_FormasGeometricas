@@ -30,7 +30,7 @@ public class Quadrado extends PoligonoReto{
      * @param lado Lado para o quadrado. Valor deve ser igual ou maior a 1, ou será corrigido para 1.
      */
     public Quadrado(double lado){
-        super(Quadrado, lado, lado);
+        super("Quadrado", lado, lado);
     }
 
     /**
@@ -38,7 +38,7 @@ public class Quadrado extends PoligonoReto{
      * @return Área do quadrado (double)
      */
     @Override
-    public double area(double base, double altura){
+    public double area(){
         return base * altura;
     }
 
@@ -48,7 +48,7 @@ public class Quadrado extends PoligonoReto{
      */
     @Override
     public double perimetro(){
-        return perimetro * altura;
+        return 4 * base;
     }
 
     /**
@@ -57,7 +57,7 @@ public class Quadrado extends PoligonoReto{
      */
     @Override
     public String toString(){
-        return super.toString() + String.format(" | Lado: %.4f.",base);
+        return super.toString() + String.format(" | Lado: %.4f.", base);
     }
 
 }
